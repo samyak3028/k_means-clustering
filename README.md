@@ -20,6 +20,10 @@
 
 ##### We need to find K because for every data point its cluster centre should be nearest so the method which I have used involved applying kmeans on range of k from 1 to any upper limit then for each k calculating within cluster sum of square and then Plot for it the bend it consider appropriate value here it is 5.
 
+![After Clustering](https://github.com/samyak3028/k_means-clustering/blob/main/k determining.png?raw=true)
+##### Method to determine K
+
+
 #### After finding k follow this steps:
 
 ##### Firstly we have to intitilize cluster centre for each cluster.
