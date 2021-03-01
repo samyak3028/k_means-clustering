@@ -14,7 +14,7 @@
 ##### Before clustering
 
 ![After Clustering](https://github.com/samyak3028/k_means-clustering/blob/main/after1.png?raw=true)
-##### Before clustering
+##### After clustering
 
 
 ##### Firstly we have to intitilize cluster centre for each cluster.
