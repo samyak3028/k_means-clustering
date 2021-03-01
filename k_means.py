@@ -62,34 +62,35 @@ class Kmeans:
     def predict(self):
         return self.Output,self.Centroids.T
 
-    def WCSS(self):
-        wcss=0
+    def clustersum(self):
+        sum_of_cluster=0
         for k in range(self.K):
-            wcss+=np.sum((self.Output[k+1]-self.Centroids[:,k])**2)
+            sum_of_cluster+=np.sum((self.Output[k+1]-self.Centroids[:,k])**2)
         return wcss
 
-dataset=pd.read_csv('C:/Users/Hp 840/Desktop/Book2.csv',encoding='latin1')
+dataset=pd.read_csv('Book2.csv',encoding='latin1')
 X = dataset.iloc[:, [3, 4]].values
 X
 #Next step is to choose the number of iterations which might guarantee convergence.
 m=X.shape[0]
 n_iter=100
-WCSS_array=np.array([])
+sum_of_cluster_array=np.array([])
 for K in range(1,11):
     kmeans=Kmeans(X,K)
     kmeans.fit(n_iter)
     Output,Centroids=kmeans.predict()
     wcss=0
     for k in range(K):
-        wcss+=np.sum((Output[k+1]-Centroids[k,:])**2)
-    #WCSS_array=np.append(WCSS_array,kmeans.WCSS())
-    WCSS_array=np.append(WCSS_array,wcss)
+        sum_of_cluster+=np.sum((Output[k+1]-Centroids[k,:])**2)
+    
+    sum_of_cluster_array=np.append(sum_of_cluster_array,sum_of_cluster)
+# k is selected using method determined in readme.    
 K=5
 color=['red','blue','green','cyan','magenta']
 labels=['cluster1','cluster2','cluster3','cluster4','cluster5']
 for k in range(K):
     plt.scatter(Output[k+1][:,0],Output[k+1][:,1],c=color[k],label=labels[k])
-plt.scatter(Centroids[:,0],Centroids[:,1],s=300,c='yellow',label='Centroids')
+plt.scatter(Centroids[:,0],Centroids[:,1],s=300,c='black',label='Centroids')
 plt.title('Clusters of customers')
 plt.xlabel('Annual Income (k$)')
 plt.ylabel('Spending Score (1-100)')
