@@ -13,7 +13,7 @@
 ![Before Clustering](https://github.com/samyak3028/k_means-clustering/blob/main/before.png?raw=true)
 ##### Before clustering
 
-![After Clustering](https://github.com/samyak3028/k_means-clustering/blob/main/after1.png?raw=true)
+![After Clustering](https://github.com/samyak3028/k_means-clustering/blob/main/after.jfif?raw=true)
 ##### After clustering
 
 ## Algorithm
