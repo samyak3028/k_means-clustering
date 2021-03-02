@@ -6,7 +6,7 @@
 
 #### Python 3.5
 #### Numpy 1.11.0
-#### Datasetcustomers.csv(Book2) and Superstore.csv
+#### Dataset - customers.csv(Book2) and Superstore.csv
 
 ## Description
 #### k-Means clustering is one of the most popular clustering methods in data mining and also in unsupervised machine learning.In this area of machine learning,we will have the data, but we don’t have any target variable as in the case of supervised learning. So the goal here is to observe the hidden patterns among the data and group them into clusters
